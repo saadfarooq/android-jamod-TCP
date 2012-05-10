@@ -48,31 +48,31 @@ public class ReadDeviceIdentificationResponse
 	   
 	  }//readData
 
-	public int getM_MEIType() {
+	public int getMEIType() {
 		return m_MEIType;
 	}
 
-	public int getM_DeviceIDCode() {
+	public int getDeviceIDCode() {
 		return m_DeviceIDCode;
 	}
 
-	public int getM_ConfirmityLevel() {
+	public int getConfirmityLevel() {
 		return m_ConfirmityLevel;
 	}
 
-	public int getM_ObjectCount() {
+	public int getObjectCount() {
 		return m_ObjectCount;
 	}
 
-	public String[] getM_DeviceIdentication() {
+	public String[] getDeviceIdentication() {
 		return m_DeviceIdentication;
 	}
 
-	public int getM_MoreFollows() {
+	public int getMoreFollows() {
 		return m_MoreFollows;
 	}
 
-	public int getM_NextObjectId() {
+	public int getNextObjectId() {
 		return m_NextObjectId;
 	}
 

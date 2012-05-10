@@ -62,7 +62,15 @@ public final class ReadDeviceIdentificationRequest
 	  }//constructor
 	  
 	  
-	  /**
+	  public ReadDeviceIdentificationRequest(int slaveAddress) {
+		  super();
+		  setFunctionCode(Modbus.READ_DEVICE_IDENTIFICATION);
+		  // 3 bytes (unit id and function code is excluded)
+		  setDataLength(3);
+		  setUnitID(slaveAddress);
+	  }
+
+	/**
 	   * Method use for listening. Not used for the Android implementation
 	   */
 	  public ModbusResponse createResponse() {

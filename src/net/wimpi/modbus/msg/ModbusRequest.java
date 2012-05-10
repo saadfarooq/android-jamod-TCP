@@ -38,7 +38,7 @@ public abstract class ModbusRequest
   public abstract ModbusResponse getResponse();
   */
 
-  /**
+/*  *//**
    * Returns the <tt>ModbusResponse</tt> that
    * represents the answer to this <tt>ModbusRequest</tt>.
    * <p>
@@ -46,8 +46,8 @@ public abstract class ModbusRequest
    * the reply to this <tt>ModbusRequest</tt>.
    * <p>
    * @return the corresponding <tt>ModbusResponse</tt>.
-   */
-  public abstract ModbusResponse createResponse();
+   *//*
+  public abstract ModbusResponse createResponse();*/
 
   /**
    * Factory method for creating exception responses with the

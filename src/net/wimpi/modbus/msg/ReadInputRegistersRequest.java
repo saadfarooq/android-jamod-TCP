@@ -71,7 +71,16 @@ public final class ReadInputRegistersRequest
     setWordCount(count);
   }//constructor
   
-  public ModbusResponse createResponse() {
+  public ReadInputRegistersRequest(int startingRegisters, int registerCount,
+		int slaveAddress) {
+	  setFunctionCode(Modbus.READ_INPUT_REGISTERS);
+	  setDataLength(4);
+	  setReference(startingRegisters);
+	  setWordCount(registerCount);
+	  setUnitID(slaveAddress);
+}
+
+public ModbusResponse createResponse() {
     ReadInputRegistersResponse response = null;
     InputRegister[] inpregs = null;
 
