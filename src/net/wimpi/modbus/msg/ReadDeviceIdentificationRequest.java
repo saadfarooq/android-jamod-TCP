@@ -69,14 +69,6 @@ public final class ReadDeviceIdentificationRequest
 		  setDataLength(3);
 		  setUnitID(slaveAddress);
 	  }
-
-	/**
-	   * Method use for listening. Not used for the Android implementation
-	   */
-	  public ModbusResponse createResponse() {
-	    return new ReadDeviceIdentificationResponse();
-	  }//createResponse
-	
 	
 	  public void writeData(DataOutput dout)
 	      throws IOException {

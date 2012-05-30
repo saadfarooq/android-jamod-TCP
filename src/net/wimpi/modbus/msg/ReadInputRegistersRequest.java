@@ -80,31 +80,6 @@ public final class ReadInputRegistersRequest
 	  setUnitID(slaveAddress);
 }
 
-public ModbusResponse createResponse() {
-    ReadInputRegistersResponse response = null;
-    InputRegister[] inpregs = null;
-
-    //1. get process image
-    ProcessImage procimg = ModbusCoupler.getReference().getProcessImage();
-    //2. get input registers range
-    try {
-      inpregs = procimg.getInputRegisterRange(this.getReference(), this.getWordCount());
-    } catch (IllegalAddressException iaex) {
-      return createExceptionResponse(Modbus.ILLEGAL_ADDRESS_EXCEPTION);
-    }
-    response = new ReadInputRegistersResponse(inpregs);
-    //transfer header data
-    if (!isHeadless()) {
-      response.setTransactionID(this.getTransactionID());
-      response.setProtocolID(this.getProtocolID());
-    } else {
-      response.setHeadless();
-    }
-    response.setUnitID(this.getUnitID());
-    response.setFunctionCode(this.getFunctionCode());
-    return response;
-  }//createResponse
-
   /**
    * Sets the reference of the register to start reading
    * from with this <tt>ReadInputRegistersRequest</tt>.
