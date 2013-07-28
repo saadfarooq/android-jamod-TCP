@@ -69,9 +69,9 @@ public class ModbusTCPClient {
 	 * @throws Exception
 	 */
 	private ModbusResponse getResponse(final ModbusRequest req) throws Exception {
-//		ModbusResponse response = new AsyncTask<Void, Void, ModbusResponse>() {
-//			@Override
-//			protected ModbusResponse doInBackground(Void... params) {
+		ModbusResponse response = new AsyncTask<Void, Void, ModbusResponse>() {
+			@Override
+			protected ModbusResponse doInBackground(Void... params) {
 				try {
 					conn.connect();
 					trans.setConnection(conn);
@@ -84,11 +84,11 @@ public class ModbusTCPClient {
 				return trans.getResponse();
 			}
 			
-//		}.execute().get();
-//		
-//		return response;
-//		
-//		}
+		}.execute().get();
+		
+		return response;
+		
+		}
 	
 	
 	public ModbusResponse getPollResponse(final ModbusRequest req) throws Exception {
